@@ -1,5 +1,5 @@
  $("ul").on("click", "li", function(){
-
+	console.log("li clicked");
 	if($(this).css("color") === "rgb(128, 128, 128)"){
 		$(this).css("color", "black");
 		$(this).css("text-decoration","none");
@@ -15,9 +15,10 @@
 });
  //clik on x to del
  $("ul").on("click", "span", function(event){
- 	$(this).parent().fadeOut(500,function(){  //$(this) is the span
+ 	$(this).parent().fadeOut(600,function(){  //$(this) is the span
  		$(this).remove();					//$(this) is the li, since we used parent()
- 	})
+		
+	})
  	event.stopPropagation();
 
  });
